@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Arcanjosa S.A. | Portal DevSecOps</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="container header-content">
+      <div class="brand">
+        <span class="badge">CP05</span>
+        <h1>Arcanjosa S.A.</h1>
+      </div>
+      <nav>
+        <a href="#status">Status da Esteira</a>
+        <a href="#barreiras">Barreiras DevSecOps</a>
+        <a href="#simulador">Calculadora Interna</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <h2>Pipeline de Referência DevSecOps — Shift Left na Prática</h2>
+      <p>
+        Após o incidente de vazamento de credenciais em repositório público, a diretoria da
+        <strong>Arcanjosa S.A.</strong> estabeleceu verificações automatizadas obrigatórias
+        em cada <code>push</code> e <code>pull_request</code>.
+      </p>
+    </section>
+
+    <section id="status" class="cards">
+      <article class="card">
+        <div class="card-header">
+          <span class="tag tag-secret">Secret Scanning</span>
+          <h3>Gitleaks</h3>
+        </div>
+        <p>
+          Inspeciona todo o histórico de commits (<code>fetch-depth: 0</code>) em busca de chaves de API,
+          tokens AWS e senhas hardcoded antes que cheguem ao ambiente de produção.
+        </p>
+      </article>
+
+      <article class="card">
+        <div class="card-header">
+          <span class="tag tag-sast">SAST</span>
+          <h3>Semgrep</h3>
+        </div>
+        <p>
+          Realiza análise estática do código-fonte (Static Application Security Testing) procurando
+          padrões inseguros como injeção de código via <code>eval()</code>, XSS e falhas de lógica.
+        </p>
+      </article>
+
+      <article class="card">
+        <div class="card-header">
+          <span class="tag tag-container">Container</span>
+          <h3>Dockerfile &amp; Nginx</h3>
+        </div>
+        <p>
+          Aplicação empacotada em imagem leve baseada em <code>nginx:alpine</code> para entrega padronizada
+          e auditável na esteira de CI/CD.
+        </p>
+      </article>
+    </section>
+
+    <section id="simulador" class="simulator">
+      <h3>Simulador de Expressões Financeiras — Arcanjosa S.A.</h3>
+      <p>Utilitário interno monitorado pelo pipeline SAST (Semgrep):</p>
+      <div class="calc-box">
+        <input id="expressao" type="text" placeholder="Ex: 1500 * 1.12" value="1500 * 1.12" />
+        <button id="btn-calcular" type="button">Calcular</button>
+      </div>
+      <p id="resultado" class="resultado">Resultado: aguardando cálculo...</p>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>FIAP — Engenharia de Software | DevSecOps and Cloud Computing — CP05</p>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
