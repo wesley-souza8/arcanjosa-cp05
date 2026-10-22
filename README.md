@@ -2,6 +2,13 @@
 
 Repositório de referência da **Arcanjosa S.A.** para a disciplina **DevSecOps and Cloud Computing** (FIAP — Engenharia de Software).
 
+## Identificação
+
+- **Aluno:** Wesley Souza de Oliveira
+- **RM:** 97874
+- **Turma:** 4ESR
+- **Professor:** Gabriel Henrique Boyczuk Arcanjo
+
 ## Estrutura do Projeto
 
 - [`Dockerfile`](./Dockerfile): Empacotamento da aplicação estática utilizando `nginx:alpine`.
